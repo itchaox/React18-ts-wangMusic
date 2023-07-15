@@ -3,16 +3,15 @@
  * @Author     : itchaox
  * @Date       : 2023-07-15 15:15
  * @LastAuthor : itchaox
- * @LastTime   : 2023-07-15 18:42
+ * @LastTime   : 2023-07-16 00:00
  * @desc       :
  */
+import { useRoutes } from 'react-router-dom';
+
+import routes from './router';
+
 function App() {
-  return (
-    <>
-      <h1>Test App</h1>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
-    </>
-  );
+  return <>{useRoutes(routes)}</>;
 }
 
 export default App;
