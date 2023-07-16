@@ -3,15 +3,20 @@
  * @Author     : itchaox
  * @Date       : 2023-07-15 15:15
  * @LastAuthor : itchaox
- * @LastTime   : 2023-07-16 15:13
+ * @LastTime   : 2023-07-16 22:55
  * @desc       :
  */
 import { Suspense } from 'react';
 import { Link, useRoutes } from 'react-router-dom';
 
 import routes from './router';
+import useAppSelector from './store/hook';
 
 function App() {
+  const recommendStore = useAppSelector((state) => ({
+    number: state.recommend.number,
+  }));
+
   return (
     <>
       {/* 顶部导航 */}
@@ -31,6 +36,7 @@ function App() {
       </div>
       {/* FIXME Suspense 路由懒加载时, 等待异步操作完成期间, 进行占位处理, 提高用户体验 */}
       <Suspense fallback="Loading...">{useRoutes(routes)}</Suspense>
+      <h1>{recommendStore.number + 100}</h1>
     </>
   );
 }
