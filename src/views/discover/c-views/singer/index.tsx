@@ -1,25 +1,24 @@
 /*
  * @Version    : v1.00
  * @Author     : itchaox
- * @Date       : 2023-07-16 08:49
+ * @Date       : 2023-07-16 12:31
  * @LastAuthor : itchaox
- * @LastTime   : 2023-07-16 14:49
- * @desc       : 发现音乐
+ * @LastTime   : 2023-07-16 12:32
+ * @desc       : 歌手
  */
 import React, { memo } from 'react';
 import type { FC, ReactNode } from 'react';
-import { Outlet } from 'react-router-dom';
 
 interface Props {
   children?: ReactNode;
 }
 
-const Discover: FC<Props> = memo(() => {
+const Singer: FC<Props> = memo(() => {
   return (
     <>
-      <Outlet />
+      <div>Singer</div>
     </>
   );
 });
 
-export default Discover;
+export default Singer;

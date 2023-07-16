@@ -3,7 +3,7 @@
  * @Author     : itchaox
  * @Date       : 2023-07-16 08:49
  * @LastAuthor : itchaox
- * @LastTime   : 2023-07-16 09:56
+ * @LastTime   : 2023-07-16 14:41
  * @desc       : 关注
  */
 import React, { memo } from 'react';
@@ -13,12 +13,12 @@ interface Props {
   children?: ReactNode;
 }
 
-const Friend: FC<Props> = memo(() => {
+const Follow: FC<Props> = memo(() => {
   return (
     <>
-      <div>Friend</div>
+      <div>follow</div>
     </>
   );
 });
 
-export default Friend;
+export default Follow;
