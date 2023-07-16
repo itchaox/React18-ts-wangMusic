@@ -3,7 +3,7 @@
  * @Author     : itchaox
  * @Date       : 2023-07-15 15:15
  * @LastAuthor : itchaox
- * @LastTime   : 2023-07-15 18:25
+ * @LastTime   : 2023-07-16 09:45
  * @desc       :
  */
 /* eslint-env node */
@@ -29,5 +29,6 @@ module.exports = {
   rules: {
     'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
     '@typescript-eslint/no-non-null-assertion': 'off',
+    '@typescript-eslint/no-unused-vars': 'off',
   },
 };

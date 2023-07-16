@@ -3,21 +3,37 @@
  * @Author     : itchaox
  * @Date       : 2023-07-15 23:57
  * @LastAuthor : itchaox
- * @LastTime   : 2023-07-16 00:10
+ * @LastTime   : 2023-07-16 10:03
  * @desc       :
  */
-import { RouteObject } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
+import type { RouteObject } from 'react-router-dom';
 
-import WangTest from '@/views/WangTest';
+import Discover from '@/views/discover';
+import Download from '@/views/download';
+import Friend from '@/views/friend';
+import My from '@/views/my';
 
 const routes: RouteObject[] = [
   {
     path: '/',
-    element: <div>main.ts</div>,
+    element: <Navigate to="/my" />,
   },
   {
-    path: '/w',
-    element: <WangTest />,
+    path: '/discover',
+    element: <Discover />,
+  },
+  {
+    path: '/my',
+    element: <My />,
+  },
+  {
+    path: '/friend',
+    element: <Friend />,
+  },
+  {
+    path: '/download',
+    element: <Download />,
   },
 ];
 
