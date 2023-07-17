@@ -2,8 +2,8 @@
  * @Version    : v1.00
  * @Author     : itchaox
  * @Date       : 2023-07-15 15:15
- * @LastAuthor : itchaox
- * @LastTime   : 2023-07-16 22:29
+ * @LastAuthor : wangchao
+ * @LastTime   : 2023-07-17 09:52
  * @desc       :
  */
 /* eslint-env node */
@@ -31,6 +31,6 @@ module.exports = {
     'react-refresh/only-export-components': 'off',
     '@typescript-eslint/no-non-null-assertion': 'off',
     '@typescript-eslint/no-unused-vars': 'off',
-    // '@typescript-eslint/no-unsafe-assignment': 'off',
+    '@typescript-eslint/no-unsafe-assignment': 'off',
   },
 };
