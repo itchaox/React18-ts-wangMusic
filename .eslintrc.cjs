@@ -3,7 +3,7 @@
  * @Author     : itchaox
  * @Date       : 2023-07-15 15:15
  * @LastAuthor : wangchao
- * @LastTime   : 2023-07-17 09:52
+ * @LastTime   : 2023-07-18 14:44
  * @desc       :
  */
 /* eslint-env node */
@@ -32,5 +32,7 @@ module.exports = {
     '@typescript-eslint/no-non-null-assertion': 'off',
     '@typescript-eslint/no-unused-vars': 'off',
     '@typescript-eslint/no-unsafe-assignment': 'off',
+    '@typescript-eslint/no-unsafe-member-access': 'off',
+    '@typescript-eslint/no-unsafe-call':'off','
   },
 };

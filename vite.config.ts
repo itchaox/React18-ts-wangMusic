@@ -2,8 +2,8 @@
  * @Version    : v1.00
  * @Author     : itchaox
  * @Date       : 2023-07-15 15:15
- * @LastAuthor : itchaox
- * @LastTime   : 2023-07-15 17:13
+ * @LastAuthor : wangchao
+ * @LastTime   : 2023-07-18 14:42
  * @desc       :
  */
 import react from '@vitejs/plugin-react';
@@ -17,5 +17,8 @@ export default defineConfig({
       // 代码路径打包后提示
       '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
+  },
+  server: {
+    port: 7878,
   },
 });
