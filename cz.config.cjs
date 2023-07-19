@@ -3,7 +3,7 @@
  * @Author     : wangchao
  * @Date       : 2023-07-14 11:06
  * @LastAuthor : itchaox
- * @LastTime   : 2023-07-15 18:25
+ * @LastTime   : 2023-07-19 23:12
  * @desc       :
  */
 
@@ -18,7 +18,7 @@ module.exports = {
     body: '填写详细描述（可选）。使用 "|" 换行 :\n',
     confirmCommit: '是否提交或修改commit ?',
   },
-  types: [
+  typesAppend: [
     { value: 'init', name: 'init:     初始化项目' },
     { value: 'feat', name: 'feat:     新增功能' },
     { value: 'fix', name: 'fix:      修复 bug' },
