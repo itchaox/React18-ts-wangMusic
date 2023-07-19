@@ -3,7 +3,7 @@
  * @Author     : wangchao
  * @Date       : 2023-07-18 16:43
  * @LastAuthor : wangchao
- * @LastTime   : 2023-07-18 17:07
+ * @LastTime   : 2023-07-19 09:45
  * @desc       :
  */
 import { memo } from 'react';
@@ -26,13 +26,18 @@ const AppHeader: FC<Props> = memo(() => {
   function getMenu(menuItem: MenuItem) {
     if (menuItem.type === 'path') {
       return (
-        <NavLink to={menuItem.url} className="px-6 text-white text-base" key={menuItem.name}>
+        <NavLink to={menuItem.url} className="p-5 text-white text-base hover:bg-stone-500 " key={menuItem.name}>
           {menuItem.name}
         </NavLink>
       );
     } else {
       return (
-        <a href={menuItem.url} className="px-6 text-white text-base" key={menuItem.name} target="_blank">
+        <a
+          href={menuItem.url}
+          className="p-5 text-white text-base hover:bg-stone-500 "
+          key={menuItem.name}
+          target="_blank"
+        >
           {menuItem.name}
         </a>
       );
@@ -41,7 +46,12 @@ const AppHeader: FC<Props> = memo(() => {
 
   return (
     <>
-      <div className="h-16 flex items-center justify-center bg-zinc-700	">{headerMenu.map((item) => getMenu(item))}</div>
+      <div className="h-16 flex items-center justify-center bg-zinc-700	">
+        <a className="text-rose-500 text-2xl mr-3" href="/#">
+          wangMusic
+        </a>
+        <div>{headerMenu.map((item) => getMenu(item))}</div>
+      </div>
     </>
   );
 });
