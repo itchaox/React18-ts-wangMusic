@@ -3,7 +3,7 @@
  * @Author     : wangchao
  * @Date       : 2023-07-14 11:06
  * @LastAuthor : itchaox
- * @LastTime   : 2023-07-19 23:29
+ * @LastTime   : 2023-07-19 23:32
  * @desc       :
  */
 
@@ -11,13 +11,22 @@
 /** @type {import('cz-git').CommitizenGitOptions} */
 module.exports = {
   alias: { fd: 'docs: fix typos' },
-  skipQuestions: ['body', 'confirmCommit'],
+  // 跳过某些问题
+  skipQuestions: [
+    'customScope',
+    'breaking',
+    'footerPrefixesSelect',
+    'customFooterPrefix',
+    'footer',
+    'generatedSelectByAI',
+    'generatingByAI',
+    'body',
+    'confirmCommit',
+  ],
   messages: {
     type: '选择你要提交的类型 :',
     scope: '选择一个提交范围（可选）:',
     subject: '填写简短描述 :',
-    body: '填写详细描述（可选）。使用 "|" 换行 :',
-    confirmCommit: '是否提交或修改commit ?',
   },
   types: [
     { value: 'init', name: 'init:     初始化项目' },
