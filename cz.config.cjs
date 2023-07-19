@@ -3,7 +3,7 @@
  * @Author     : wangchao
  * @Date       : 2023-07-14 11:06
  * @LastAuthor : itchaox
- * @LastTime   : 2023-07-19 23:12
+ * @LastTime   : 2023-07-19 23:22
  * @desc       :
  */
 
@@ -14,11 +14,11 @@ module.exports = {
   messages: {
     type: '选择你要提交的类型 :',
     scope: '选择一个提交范围（可选）:',
-    subject: '填写简短描述 :\n',
-    body: '填写详细描述（可选）。使用 "|" 换行 :\n',
+    subject: '填写简短描述 :',
+    body: '填写详细描述（可选）。使用 "|" 换行 :',
     confirmCommit: '是否提交或修改commit ?',
   },
-  typesAppend: [
+  types: [
     { value: 'init', name: 'init:     初始化项目' },
     { value: 'feat', name: 'feat:     新增功能' },
     { value: 'fix', name: 'fix:      修复 bug' },
@@ -33,7 +33,7 @@ module.exports = {
   allowCustomScopes: true,
   allowEmptyScopes: true,
   customScopesAlias: '自定义',
-  emptyScopesAlias: '空',
+  emptyScopesAlias: '空范围',
   breaklineNumber: 100,
   breaklineChar: '|',
   confirmColorize: true,
@@ -41,4 +41,5 @@ module.exports = {
   maxSubjectLength: Infinity,
   minSubjectLength: 0,
   defaultType: 'feat',
+  upperCaseSubject: true,
 };
