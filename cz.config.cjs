@@ -3,7 +3,7 @@
  * @Author     : wangchao
  * @Date       : 2023-07-14 11:06
  * @LastAuthor : itchaox
- * @LastTime   : 2023-07-19 23:22
+ * @LastTime   : 2023-07-19 23:29
  * @desc       :
  */
 
@@ -11,6 +11,7 @@
 /** @type {import('cz-git').CommitizenGitOptions} */
 module.exports = {
   alias: { fd: 'docs: fix typos' },
+  skipQuestions: ['body', 'confirmCommit'],
   messages: {
     type: '选择你要提交的类型 :',
     scope: '选择一个提交范围（可选）:',
