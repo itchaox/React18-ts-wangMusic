@@ -3,7 +3,7 @@
  * @Author     : itchaox
  * @Date       : 2023-07-16 08:49
  * @LastAuthor : wangchao
- * @LastTime   : 2023-07-19 10:40
+ * @LastTime   : 2023-07-19 10:57
  * @desc       : 发现音乐
  */
 import { Suspense, memo } from 'react';
@@ -26,8 +26,8 @@ const Discover: FC<Props> = memo(() => {
             key={item.url}
             className={({ isActive }) =>
               isActive
-                ? 'px-4 mr-4 text-white text-base bg-stone-500'
-                : 'px-4 mr-4 text-white text-base hover:bg-stone-500'
+                ? 'px-4 mr-4 text-white text-base bg-stone-500 rounded-lg'
+                : 'px-4 mr-4 text-white text-base hover:bg-stone-500 rounded-md'
             }
           >
             {item.name}
