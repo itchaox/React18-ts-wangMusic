@@ -3,7 +3,7 @@
  * @Author     : wangchao
  * @Date       : 2023-07-18 16:50
  * @LastAuthor : wangchao
- * @LastTime   : 2023-07-18 16:55
+ * @LastTime   : 2023-07-19 10:39
  * @desc       :
  */
 export const headerMenu = [
@@ -36,5 +36,32 @@ export const headerMenu = [
     name: '下载客户端',
     type: 'path',
     url: '/download',
+  },
+];
+
+export const discoverMenu = [
+  {
+    name: '推荐',
+    url: '/discover/recommend',
+  },
+  {
+    name: '排行榜',
+    url: '/discover/rank',
+  },
+  {
+    name: '歌单',
+    url: '/discover/songList',
+  },
+  {
+    name: '主播电台',
+    url: '/discover/radio',
+  },
+  {
+    name: '歌手',
+    url: '/discover/singer',
+  },
+  {
+    name: '新碟上架',
+    url: '/discover/newSong',
   },
 ];

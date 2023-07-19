@@ -3,12 +3,12 @@
  * @Author     : wangchao
  * @Date       : 2023-07-18 16:43
  * @LastAuthor : wangchao
- * @LastTime   : 2023-07-19 09:45
+ * @LastTime   : 2023-07-19 10:44
  * @desc       :
  */
 import { memo } from 'react';
 import type { FC, ReactNode } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import { headerMenu } from '@/config/menu';
 
@@ -26,7 +26,13 @@ const AppHeader: FC<Props> = memo(() => {
   function getMenu(menuItem: MenuItem) {
     if (menuItem.type === 'path') {
       return (
-        <NavLink to={menuItem.url} className="p-5 text-white text-base hover:bg-stone-500 " key={menuItem.name}>
+        <NavLink
+          to={menuItem.url}
+          className={({ isActive }) =>
+            isActive ? 'p-5 text-white text-base bg-stone-500' : 'p-5 text-white text-base hover:bg-stone-500'
+          }
+          key={menuItem.name}
+        >
           {menuItem.name}
         </NavLink>
       );
@@ -52,6 +58,7 @@ const AppHeader: FC<Props> = memo(() => {
         </a>
         <div>{headerMenu.map((item) => getMenu(item))}</div>
       </div>
+      <div className="h-2 bg-red-500"></div>
     </>
   );
 });
