@@ -3,7 +3,7 @@
  * @Author     : wangchao
  * @Date       : 2023-07-14 11:06
  * @LastAuthor : itchaox
- * @LastTime   : 2023-07-19 23:32
+ * @LastTime   : 2023-07-19 23:37
  * @desc       :
  */
 
@@ -22,6 +22,7 @@ module.exports = {
     'generatingByAI',
     'body',
     'confirmCommit',
+    'issue',
   ],
   messages: {
     type: '选择你要提交的类型 :',
@@ -44,10 +45,8 @@ module.exports = {
   allowEmptyScopes: true,
   customScopesAlias: '自定义',
   emptyScopesAlias: '空范围',
-  // breaklineNumber: 100,
-  // breaklineChar: '|',
-  // confirmColorize: true,
   maxHeaderLength: Infinity,
+  issuePrefixes: false,
   maxSubjectLength: Infinity,
   minSubjectLength: 0,
   defaultType: 'feat',
