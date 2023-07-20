@@ -3,7 +3,7 @@
  * @Author     : wangchao
  * @Date       : 2023-07-14 11:06
  * @LastAuthor : wangchao
- * @LastTime   : 2023-07-20 09:01
+ * @LastTime   : 2023-07-20 09:02
  * @desc       :
  */
 
@@ -42,14 +42,8 @@ module.exports = {
     { value: 'test', name: 'test:     测试相关，增加测试用例等' },
     { value: 'revert', name: 'revert:   回滚到上一个版本' },
   ],
-  allowCustomScopes: true,
-  allowEmptyScopes: true,
   customScopesAlias: '自定义',
   emptyScopesAlias: '空范围',
-  maxHeaderLength: Infinity,
-  issuePrefixes: false,
-  maxSubjectLength: Infinity,
-  minSubjectLength: 0,
   defaultType: 'feat',
   upperCaseSubject: true,
 };
