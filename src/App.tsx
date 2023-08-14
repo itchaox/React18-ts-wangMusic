@@ -2,8 +2,8 @@
  * @Version    : v1.00
  * @Author     : itchaox
  * @Date       : 2023-07-15 15:15
- * @LastAuthor : wangchao
- * @LastTime   : 2023-07-20 08:58
+ * @LastAuthor : itchaox
+ * @LastTime   : 2023-08-12 17:00
  * @desc       : 主入口
  */
 import { Suspense } from 'react';
@@ -11,10 +11,12 @@ import { useRoutes } from 'react-router-dom';
 
 import AppFooter from './components/app-footer';
 import AppHeader from './components/app-header';
+import useScreenScale from './hooks/useScreenScale';
 
 import routes from '@/router';
 
 function App() {
+  useScreenScale();
   return (
     <>
       <AppHeader />
