@@ -19,7 +19,11 @@ interface Props {
 const TopCarousel: FC<Props> = memo(() => {
   const recommendStore = useAppSelector((state) => ({
     bannerList: state.recommend.bannerList,
+    hotRecommend: state.recommend.hotRecommend
   }));
+
+  console.log(recommendStore);
+
 
   return (
     <>

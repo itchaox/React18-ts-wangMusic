@@ -2,14 +2,16 @@
  * @Version    : v1.00
  * @Author     : itchaox
  * @Date       : 2023-07-19 21:47
- * @LastAuthor : itchaox
- * @LastTime   : 2023-07-19 23:07
+ * @LastAuthor : wangchao
+ * @LastTime   : 2023-08-09 17:21
  * @desc       :
  */
 import { AimOutlined, ArrowRightOutlined } from '@ant-design/icons';
 import { Button } from 'antd';
 import { memo } from 'react';
 import type { FC, ReactNode } from 'react';
+
+import { useAppSelector } from '@/store/hook';
 
 interface Props {
   children?: ReactNode;
@@ -39,6 +41,10 @@ const HotRecommend: FC<Props> = memo(() => {
     },
   ];
 
+  const { hotRecommend } = useAppSelector((state) => ({
+    hotRecommend: state.recommend.hotRecommend,
+  }));
+
   return (
     <>
       <div className="flex justify-center">
@@ -49,7 +55,7 @@ const HotRecommend: FC<Props> = memo(() => {
                 <AimOutlined />
                 <div className="text-xl mx-3">热门推荐</div>
                 {tabList.map((item) => (
-                  <Button type="link" className="text-gray-500">
+                  <Button type="link" className="text-gray-500" key={item.name}>
                     {item.name}
                   </Button>
                 ))}
@@ -62,6 +68,10 @@ const HotRecommend: FC<Props> = memo(() => {
           </div>
           <div className="w-1/4">右</div>
         </div>
+
+        {hotRecommend.map((item, index) => (
+          <div key={index}>{index}</div>
+        ))}
       </div>
     </>
   );

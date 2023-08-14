@@ -3,12 +3,12 @@
  * @Author     : itchaox
  * @Date       : 2023-07-16 22:11
  * @LastAuthor : wangchao
- * @LastTime   : 2023-07-19 14:58
+ * @LastTime   : 2023-08-09 17:09
  * @desc       :
  */
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
-import { getBannerList } from '@/service/modules/recommend';
+import { getBannerList, getHotRecommend } from '@/service/modules/recommend';
 
 export const getBannerListAction = createAsyncThunk('bannerList', async (arg, { dispatch }) => {
   const res = await getBannerList();
@@ -34,12 +34,20 @@ export const getBannerListAction = createAsyncThunk('bannerList', async (arg, { 
   dispatch(changeBannerListAction(_data));
 });
 
+export const getHotRecommendAction = createAsyncThunk('hotRecommend', async (arg, { dispatch }) => {
+  const res = await getHotRecommend();
+  const data = res.result;
+  dispatch(changeHotRecommendAction(data));
+});
+
 interface BannerList {
   bannerList: any[];
+  hotRecommend: any[];
 }
 
 const initialState: BannerList = {
   bannerList: [],
+  hotRecommend: [],
 };
 
 export const recommendSlice = createSlice({
@@ -49,8 +57,11 @@ export const recommendSlice = createSlice({
     changeBannerListAction(state, { payload }) {
       state.bannerList = payload;
     },
+    changeHotRecommendAction(state, { payload }) {
+      state.hotRecommend = payload;
+    },
   },
 });
 
-export const { changeBannerListAction } = recommendSlice.actions;
+export const { changeBannerListAction, changeHotRecommendAction } = recommendSlice.actions;
 export default recommendSlice.reducer;
