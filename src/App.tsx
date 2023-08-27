@@ -3,7 +3,7 @@
  * @Author     : itchaox
  * @Date       : 2023-07-15 15:15
  * @LastAuthor : itchaox
- * @LastTime   : 2023-08-12 17:00
+ * @LastTime   : 2023-08-27 16:16
  * @desc       : 主入口
  */
 import { Suspense } from 'react';
@@ -11,12 +11,10 @@ import { useRoutes } from 'react-router-dom';
 
 import AppFooter from './components/app-footer';
 import AppHeader from './components/app-header';
-import useScreenScale from './hooks/useScreenScale';
 
 import routes from '@/router';
 
 function App() {
-  useScreenScale();
   return (
     <>
       <AppHeader />
